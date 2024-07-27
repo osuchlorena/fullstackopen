@@ -68,6 +68,13 @@ const App = () => {
           next anecdote
         </button>
       </div>
+      <h1>Anecdote with most votes</h1>
+      {
+        anecdotes.length > 0 && (
+          <p>{anecdotes.reduce((prev, current) => (prev.vote > current.vote) ? prev : current).text}</p>
+        )
+      }
+
     </div>
   );
 };
