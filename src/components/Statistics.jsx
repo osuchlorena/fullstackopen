@@ -1,6 +1,14 @@
 export default function Statistics({ good, neutral, bad }) {
     const total = bad + good + neutral
     const average = (bad + good + neutral) / 3
+    if (total == 0) {
+        return (
+            <>
+            <h1>Statistics</h1>
+            <h3>No feedback given</h3>
+            </>
+        )
+    }
     return (
         <>
             <h1>Statistics</h1>
