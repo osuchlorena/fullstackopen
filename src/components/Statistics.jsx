@@ -1,3 +1,5 @@
+import StatisticLine from "./StatisticLine "
+
 export default function Statistics({ good, neutral, bad }) {
     const total = bad + good + neutral
     const average = (bad + good + neutral) / 3
@@ -12,11 +14,11 @@ export default function Statistics({ good, neutral, bad }) {
     return (
         <>
             <h1>Statistics</h1>
-            <h3>Good {good} </h3>
-            <h3>Neutral {neutral} </h3>
-            <h3>Bad {bad} </h3>
-            <h4>Total {total}</h4>
-            <h4>Average {average}</h4>
+            <StatisticLine text="Good" value={good} />
+            <StatisticLine text="Neutral" value={neutral} />
+            <StatisticLine text="Bad" value={bad} />
+            <StatisticLine text="Total" value={total} />
+            <StatisticLine text="Average" value={average} />
         </>
     )
 }
